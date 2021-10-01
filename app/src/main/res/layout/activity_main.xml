@@ -60,8 +60,7 @@
     <ImageView
         android:layout_gravity="center_horizontal"
         android:scaleType="centerCrop"
-        android:rotation="90"
-        android:src="@drawable/vika_Koz"
+        android:src="@drawable/vika_24325oz"
         android:layout_width="200dp"
         android:layout_height="200dp"/>
 
@@ -156,6 +155,7 @@
     
     <Button
         android:text="Kick in the ass"
+        android:onClick="setNewTextClick"
         android:layout_marginTop="30dp"
         app:backgroundTint="#6C8F44"
         android:layout_width="match_parent"
