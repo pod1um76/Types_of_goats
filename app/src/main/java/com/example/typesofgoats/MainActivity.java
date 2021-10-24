@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         arrayListSpinner.add("Коза горная");
         arrayListSpinner.add("Коза полевая");
-        arrayListSpinner.add("Коза обыкновенная");
+        arrayListSpinner.add("Коза домашняя");
         arrayListSpinner.add("Коза вонючая))");
 
         adapterSpinner = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, arrayListSpinner);
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         priceForGoatsMap.put("Коза горная", 8);
         priceForGoatsMap.put("Коза полевая", 7);
-        priceForGoatsMap.put("Коза обыкновенная", 3);
+        priceForGoatsMap.put("Коза домашняя", 3);
         priceForGoatsMap.put("Коза вонючая))", 15);
     }
 
@@ -95,6 +96,26 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         TextView priceTextView = findViewById(R.id.priceTextView);
         String sumPrice = Double.toString(quantity * price);
         priceTextView.setText(sumPrice);
+
+        ImageView goodsImageView = findViewById(R.id.goodsImageView);
+
+        switch (typeGoat) {
+            case "Коза горная":
+                goodsImageView.setImageResource(R.drawable.mount_goat);
+                break;
+            case "Коза полевая":
+                goodsImageView.setImageResource(R.drawable.meadow_goat);
+                break;
+            case "Коза домашняя":
+                goodsImageView.setImageResource(R.drawable.home_goat);
+                break;
+            case "Коза вонючая))":
+                goodsImageView.setImageResource(R.drawable.vika_24325oz);
+                break;
+            default:
+                goodsImageView.setImageResource(R.drawable.mount_goat);
+                break;
+        }
     }
 
     @Override

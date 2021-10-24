@@ -59,11 +59,12 @@
     </Spinner>
 
     <ImageView
+        android:id="@+id/goodsImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:scaleType="centerCrop"
-        android:src="@drawable/vika_24325oz"
-        android:layout_width="200dp"
-        android:layout_height="200dp"/>
+        android:src="@drawable/vika_24325oz" />
 
     <RelativeLayout
         android:layout_width="match_parent"
